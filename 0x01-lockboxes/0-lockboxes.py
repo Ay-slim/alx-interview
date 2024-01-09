@@ -13,10 +13,8 @@ def canUnlockAll(boxes):
     """
     locked_boxes = [x for x in range(0, len(boxes))]  # unopened boxes
     unused_keys = set([0])  # unique set of keys that have not been checked
-    current_key = 0   # current box being checked
     while len(unused_keys) and len(locked_boxes):
-        current_key = next(iter(unused_keys))   # Pick a random unused key
-        unused_keys.remove(current_key)   # Remove it from unused keys
+        current_key = unused_keys.pop()   # Pop an unused key to check
         while current_key is not None:
             if len(locked_boxes) == 0:
                 return True
@@ -24,7 +22,7 @@ def canUnlockAll(boxes):
             if current_key in locked_boxes:
                 locked_boxes.remove(current_key)
             else:
-                # Opened box, break and get new key from outer loop
+                # Already open box, break and get new key from outer loop
                 break
             new_current_key = None
             for each_key in current_key_box:
