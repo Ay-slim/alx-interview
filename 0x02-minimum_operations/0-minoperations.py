@@ -2,7 +2,7 @@
 """Min operations module"""
 
 
-def minOperations(n) -> int:
+def minOperations(n):
     """
     minOperations - Function to calculate the minimum number
     of copy and paste operations on a given input length
