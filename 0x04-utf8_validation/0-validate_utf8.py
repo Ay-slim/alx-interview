@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""utf8 validation module"""
 
 
 from typing import List
