@@ -71,7 +71,7 @@ def validUTF8(data: List[int]) -> bool:
             else:
                 return False
         else:
-          if byte >> 6 != 0b10:
-              return False
-          position -= 1
+            if byte >> 6 != 0b10:
+                return False
+            position -= 1
     return position == 0
