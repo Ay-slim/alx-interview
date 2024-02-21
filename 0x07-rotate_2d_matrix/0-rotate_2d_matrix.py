@@ -10,10 +10,11 @@ def reverse_list(list_arg: List) -> None:
     half = len(list_arg) // 2
     start = 0
     end = len(list_arg) - 1
-    for l in range(half):
-        tmp = list_arg[start + l]
-        list_arg[start + l] = list_arg[end - l]
-        list_arg[end - l] = tmp
+    for step in range(half):
+        tmp = list_arg[start + step]
+        list_arg[start + step] = list_arg[end - step]
+        list_arg[end - step] = tmp
+
 
 def rotate_2d_matrix(matrix: List) -> None:
     """Function to rotate a 2d matrix"""
