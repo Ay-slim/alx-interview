@@ -5,17 +5,6 @@
 from typing import List
 
 
-def reverse_list(list_arg: List) -> None:
-    """Reverses a list"""
-    half = len(list_arg) // 2
-    start = 0
-    end = len(list_arg) - 1
-    for step in range(half):
-        tmp = list_arg[start + step]
-        list_arg[start + step] = list_arg[end - step]
-        list_arg[end - step] = tmp
-
-
 def rotate_2d_matrix(matrix: List) -> None:
     """Function to rotate a 2d matrix"""
     n = len(matrix)
@@ -25,4 +14,10 @@ def rotate_2d_matrix(matrix: List) -> None:
             matrix[i][j] = matrix[j][i]
             matrix[j][i] = tmp
     for each_row in matrix:
-        reverse_list(each_row)
+        half = len(each_row) // 2
+        start = 0
+        end = len(each_row) - 1
+        for step in range(half):
+            tmp = each_row[start + step]
+            each_row[start + step] = each_row[end - step]
+            each_row[end - step] = tmp
