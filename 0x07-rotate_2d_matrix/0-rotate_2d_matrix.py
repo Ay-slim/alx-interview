@@ -2,10 +2,7 @@
 """Module for rotating an nxn matrix in place"""
 
 
-from typing import List
-
-
-def rotate_2d_matrix(matrix: List) -> None:
+def rotate_2d_matrix(matrix: list) -> None:
     """Function to rotate a 2d matrix"""
     n = len(matrix)
     for i in range(n - 1):
