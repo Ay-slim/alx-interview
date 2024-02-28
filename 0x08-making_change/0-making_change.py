@@ -19,7 +19,7 @@ def makeChange(coins, total):
             break
         min_coins += total // coin
         new_total = total % coin
-        if new_total <= 0:
+        if new_total == 0:
             return min_coins
         total = new_total
     return -1
